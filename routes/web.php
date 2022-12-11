@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+/* mis routes */
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/empleados', App\Http\Controllers\EmpleadoController::class)->middleware("auth");
 Route::resource('/sucursales', App\Http\Controllers\SucursaleController::class)->middleware("auth");
